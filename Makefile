@@ -1,4 +1,3 @@
-
 OBJECTS = loader.o kmain.o
 CC = gcc
 CFLAGS = -m32 -nostdlib -nostdinc -fno-builtin -fno-stack-protector \
@@ -30,3 +29,9 @@ run: os.iso
 
 %.o: %.c
 		$(CC) $(CFLAGS)  $< -o $@
+
+%.o: %.s
+		$(AS) $(ASFLAGS) $< -o $@
+
+clean:
+		rm -rf *.o kernel.elf os.iso
