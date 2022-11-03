@@ -5,7 +5,7 @@
 
     int main(){
 
-           char ptr2[] = "Hello Seyon Suriyakumaran";
+           char ptr2[] = "Hello Sivanantharasa Tharsan";
 
 
     serial_write(0x3F8, ptr2, 26);
